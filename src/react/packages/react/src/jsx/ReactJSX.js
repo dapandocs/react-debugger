@@ -17,6 +17,8 @@ const jsx      = __DEV__ ? jsxWithValidationDynamic : jsxProd;
 // we may want to special case jsxs internally to take advantage of static children.
 // for now we can ship identical prod functions
 const jsxs      = __DEV__ ? jsxWithValidationStatic : jsxProd;
-const jsxDEV      = __DEV__ ? jsxWithValidation : undefined;
+// const jsxDEV      = __DEV__ ? jsxWithValidation : undefined; // 隐藏
+
+const jsxDEV = jsxProd; // 增加
 
 export {REACT_FRAGMENT_TYPE as Fragment, jsx, jsxs, jsxDEV};
